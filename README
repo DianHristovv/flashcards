@@ -1,0 +1,40 @@
+# Flashcards
+
+A simple study app for making your own flashcards and testing yourself on them.
+I built it to prepare for my exams at the naval university.
+
+**Live demo:** https://dianhristovv.github.io/flashcards/
+
+## Features
+
+- **Create cards** with a question, an answer and a field (Navigation, Mathematics, Science)
+- **Delete cards** you no longer need
+- **Saved automatically**: cards stay after you close the browser (localStorage)
+- **Study by field**: choose one field, or all fields, before starting a round
+- **Study mode**: one card at a time, reveal the answer, then mark it "I know" or "I don't know"
+- **Shuffle**: cards come in a random order every round (Fisher–Yates shuffle)
+- **Score** at the end of every round
+- **Practice mistakes**: start a new round with only the cards you got wrong
+
+## How to use
+
+1. Choose a field, write a question and an answer, and click **Save question**
+2. Click **Study mode**
+3. Pick a field (or **All**) and click **Start**
+4. Click **Show answer**, then **I know** or **I don't know**
+5. At the end, see your score and click **Practice mistakes** to repeat the ones you missed
+
+## Built with
+
+- HTML
+- CSS
+- JavaScript (no frameworks)
+
+## What I learned
+
+- Managing study-mode **state** (current index, score, wrong cards) between clicks
+- Writing reusable functions (`startRound`, `nextCard`, `shuffle`)
+- Filtering an array to study only one field (`filter`)
+- Shuffling a **copy** of an array so the original stays unchanged
+- The difference between changing an array and creating a new one (`let` vs `const`)
+- Saving and loading data with `localStorage` and `JSON`

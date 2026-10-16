@@ -26,22 +26,34 @@
         </div>
     
         <div id="study-mode" style="display: none;">
-            <h1>Study Mode</h1>
-            <div  id="card-area">
-            <p id="study-question" class="card">Question: </p>
-            <button id="show-answer" type="button">Show answer</button>
-            <p id="study-answer" class="card">Answer: </p>
-            <button id="known-answer" type="button">I know the answer</button>
-            <button id="unknown-answer" type="button">I dont know the answer</button>
-            </div>
-            <p id="score" class="card"> </p>
-            <div id="practice-button">
-            <button id="practice-mistakes" type="button">Practice Mistakes</button>
-            </div>
-            <button id="back-button" type="button">Back to Creative mode</button>
-            
+    <h1>Study Mode</h1>
 
-        </div>
+    <div id="field-picker">
+        <select id="select-field">
+            <option value="all">All</option>
+            <option value="navigation">Navigation</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="science">Science</option>
+        </select>
+        <button id="start" type="button">Start</button>
+    </div>
+
+    <div id="card-area">
+        <p id="study-question" class="card"></p>
+        <button id="show-answer" type="button">Show answer</button>
+        <p id="study-answer" class="card"></p>
+        <button id="known-answer" type="button">I know the answer</button>
+        <button id="unknown-answer" type="button">I don't know the answer</button>
+    </div>
+
+    <p id="score" class="card"></p>
+
+    <div id="practice-button">
+        <button id="practice-mistakes" type="button">Practice mistakes</button>
+    </div>
+
+    <button id="back-button" type="button">Back to cards</button>
+</div>
         <script src="script.js"></script>
     </body>
 </html>

@@ -18,6 +18,8 @@ const score=document.getElementById("score")
 const cardArea=document.getElementById("card-area")
 const practiceMistakesButton=document.getElementById("practice-mistakes")
 const practiceMistakesDiv=document.getElementById("practice-button")
+const field=document.getElementById("select-field")
+const startButton=document.getElementById("start")
 let studyDeck=[]
 let currentIndex=0
 let correctCount=0
@@ -45,6 +47,9 @@ studyDeck=shuffle(deck)
 score.textContent=""
 practiceMistakesDiv.style.display="none"
  cardArea.style.display="block"
+ field.style.display="none"
+ startButton.style.display="none"
+
  showCurrentCard()
 
 }
@@ -73,8 +78,11 @@ cardArea.style.display="none"
 
 function showCurrentCard(){
     const flashCard=studyDeck[currentIndex]
+    
+    
     questionOutput.textContent=flashCard.question
     answerOutput.textContent=""
+    
 
 }
 
@@ -126,10 +134,16 @@ showCards()
 showCards()
 
 studyModeButton.addEventListener("click",function(){
-    if(flashCards.length===0){
-        return 
-    }
-  startRound(flashCards)
+ createMode.style.display="none"
+    studyMode.style.display="block"
+    cardArea.style.display="none"
+   practiceMistakesDiv.style.display = "none"
+    score.textContent = ""
+    field.style.display="block"
+    startButton.style.display="block"
+    
+
+
 
    
 
@@ -172,3 +186,27 @@ practiceMistakesButton.addEventListener("click",function(){
 
 
 })
+
+startButton.addEventListener("click",function(){
+    let deck=flashCards
+
+if(field.value!=="all"){
+    deck=flashCards.filter(function(card){
+       return card.field.toLowerCase()===field.value.toLowerCase()
+        
+
+    })
+    
+}
+if(deck.length===0){
+        return 
+    }
+    
+  startRound(deck)
+
+   
+
+
+})
+
+
