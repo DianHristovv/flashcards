@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Flash Cards</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="create-mode" class="create-flashcard">
+        <h1>Create Flashcard</h1>
+        <form id="flashcard-form">
+        <select id="field">
+            <option value="navigation">Navigation</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="science">Science</option>
+        </select>
+        <input id="question" placeholder="Question" >
+        <input id="answer" placeholder="Answer">
+        <button id="save-question" type="submit">Save question</button> 
+    </form>
+
+
+        <h2>My Flashcards</h2>
+        <ul id="flashcard-list"></ul>
+        <button id="study-mode-button" type="button">Study mode</button>
+        </div>
+    
+        <div id="study-mode" style="display: none;">
+            <h1>Study Mode</h1>
+            <div  id="card-area">
+            <p id="study-question" class="card">Question: </p>
+            <button id="show-answer" type="button">Show answer</button>
+            <p id="study-answer" class="card">Answer: </p>
+            <button id="known-answer" type="button">I know the answer</button>
+            <button id="unknown-answer" type="button">I dont know the answer</button>
+            </div>
+            <p id="score" class="card"> </p>
+            <div id="practice-button">
+            <button id="practice-mistakes" type="button">Practice Mistakes</button>
+            </div>
+            <button id="back-button" type="button">Back to Creative mode</button>
+            
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
